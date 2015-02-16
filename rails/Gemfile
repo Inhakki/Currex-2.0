@@ -29,3 +29,8 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'active_model_serializers', '0.8.3'
+gem 'devise'
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0'
+end
