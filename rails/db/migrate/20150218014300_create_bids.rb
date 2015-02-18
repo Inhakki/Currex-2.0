@@ -3,6 +3,7 @@ class CreateBids < ActiveRecord::Migration
     create_table :bids do |t|
       t.references :user
       t.references :post
+      t.float :amount
     end
   end
 end

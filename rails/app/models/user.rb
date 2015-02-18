@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :bids, dependent: :destroy
+  has_many :posts, through: :bids
 
   def ensure_authentication_token
     if authentication_token.blank?
