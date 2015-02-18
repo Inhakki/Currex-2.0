@@ -9,6 +9,9 @@ class User < ActiveRecord::Base
   has_many :bids, dependent: :destroy
   has_many :posts, through: :bids
 
+  validates :longitude, numericality: true
+  validates :latitude, numericality: true
+
   def ensure_authentication_token
     if authentication_token.blank?
       self.authentication_token = generate_authentication_token
