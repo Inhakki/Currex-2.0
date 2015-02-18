@@ -34,6 +34,9 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    // ENV['simple-auth-devise'] = {
+    //   serverTokenEndpoint: 'http://localhost:3000/token'
+    // }
   }
 
   if (environment === 'test') {
@@ -56,9 +59,9 @@ module.exports = function(environment) {
     authorizer: 'simple-auth-authorizer:devise'
   }
 
-  ENV['simple-auth-devise'] = {
-    resourceName: 'user'
-  }
+  // ENV['simple-auth-devise'] = {
+  //   resourceName: 'user'
+  // }
 
   return ENV;
 };
